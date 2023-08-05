@@ -1,0 +1,55 @@
+import { Image, Text } from '@chakra-ui/react'
+import { Box } from 'chakra-ui'
+import btcsrc from "../asset/btc.png"
+import React from 'react'
+import { motion } from 'framer-motion'
+
+const Home = () => {
+  return (
+    <Box backgroundColor={"black"} w={"full"} h={"85vh"}>
+
+      <motion.div
+
+        style={{
+          height: "80vh"
+
+        }}
+        animate={{
+          translateY:"20px"
+        }}
+        transition={{
+
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse"
+
+        }}
+      >
+
+        <Image
+          src={btcsrc}
+          w={"full"}
+          h={"full"}
+          objectFit={"contain"}
+          filter={"grayscale(1)"}
+
+        />
+
+      </motion.div>
+
+      <Text
+        fontSize={"6xl"}
+        textAlign={"center"}
+        fontWeight={"thin"}
+        color={"whiteAlpha.700"}
+        mt={"-20"}
+      >
+        Xcrypto
+      </Text>
+
+    </Box>
+
+  )
+}
+
+export default Home
